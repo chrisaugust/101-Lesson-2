@@ -1,0 +1,37 @@
+1) method that returns sum of two integers
+
+create a result variable and set it to the sum of the two method parameters
+output the result variable
+
+START
+SET result = first_number + second_number 
+RETURN result 
+END
+
+2) method that takes array of strings and returns a concatenated string
+
+set a variable equal to the result of calling join() on the input array
+return that variable
+
+START
+SET result = array.join()
+RETURN result
+END
+
+3) method that that takes an array of integers and returns new array with every other element from input
+
+select the elements with odd index numbers, and save to an array
+return that array
+
+START
+SET iterator = 1
+SET every_other_element = [] 
+WHILE iterator < length of integer-array
+  SET current_integer = value of integer-array at index "iterator"
+  IF iterator is odd
+    go to next iteration
+  ELSE 
+    add current_integer to every_other_element array
+  iterator += 1
+RETURN every_other_element
+END

@@ -1,0 +1,32 @@
+Temperament
+
+A systematic, logical, patient temperament is an extreme asset when it comes to debugging.
+If this isn't innate, it must be cultivated. 
+Go into 'Spock mode' when debugging.
+First deal with frustration, then figure out a constructive plan of action to progress methodically towards a solution. 
+
+Error Messages
+
+Learn to read these.
+Use Search Engines, Stack Overflow, and Documentation to make sense of the error messages.
+
+Steps to Debugging
+
+1. Reproduce the error. Before figuring out the cause, we must have a consistent way to see the error in action.
+2. Determine the boundaries of the error. Do this by modifying data or code related to the error, to see how deep/far it reaches.
+3. Trace the code. "Trap the error"
+4. Understand the problem well.
+5. Implement a fix. Fix one problem at a time.
+6. Test the fix. Use tests similar to what was used in determining the boundaries of the error (step 2).
+
+Techniques for Debugging
+1. Line by line. Patience and careful, methodical reading of code is "your most powerful ability as a programmer."
+2. Rubber duck. This focuses the mind, forcing articulation of the program logic in a sequential fashion.
+3. Walking away. Once the problem is loaded into your mind, if it seems like you are spinning your wheels and getting nowhere, walk away and relax your focus on the problem. Below your conscious awareness, parts of your brain are still working on the problem and might breakthrough to a surprising solution when you least expect it.
+4. Using pry. With this REPL it is possible to pause execution of a program and examine the values of variables at that point in the program.
+5. Using a debugger. Pry is also a debugger. More to come on that later.
+
+
+
+ 
+  
