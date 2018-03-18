@@ -100,7 +100,7 @@ loop do
             end
 
   prompt('result')  
-  puts result
+  puts "\t\t" + result.to_s
 
   prompt('another?')
   answer = gets.chomp
