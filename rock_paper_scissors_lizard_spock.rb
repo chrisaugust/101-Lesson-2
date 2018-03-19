@@ -34,19 +34,20 @@ def prompt(message)
 end
 
 def convert(word_or_letter)
-  choice = case word_or_letter.downcase
-            when 'r'
-                'rock' 
-            when 'p'
-                'paper'
-            when 's'
-                'scissors'
-            when 'l'
-                'lizard'
-            when 'sp'
-                'Spock'
-            else word_or_letter 
-            end
+  case word_or_letter.downcase
+  when 'r'
+    'rock'
+  when 'p'
+    'paper'
+  when 's'
+    'scissors'
+  when 'l'
+    'lizard'
+  when 'sp'
+    'Spock'
+  else
+    word_or_letter
+  end
 end
 
 loop do
@@ -58,16 +59,17 @@ loop do
   choice = ''
 
   prompt("ROCK PAPER SCISSORS LIZARD SPOCK")
-  until (computer_wins == 5 || player_wins == 5) do
+  until computer_wins == 5 || player_wins == 5
     prompt("Round #{round_number}")
     prompt("--------------------")
 
     loop do
       prompt("Choose one: #{VALID_CHOICES.join(', ')}")
-      prompt("You can type the whole word, or just the first letter (sp for Spock)")
+      prompt("Type whole word, or just the first letter (sp for Spock)")
       user_input = Kernel.gets().chomp()
 
-      if (VALID_CHOICES.include?(user_input) || ABBREVIATIONS.include?(user_input))
+      if VALID_CHOICES.include?(user_input) ||
+         ABBREVIATIONS.include?(user_input)
         choice = convert(user_input)
         break
       else
