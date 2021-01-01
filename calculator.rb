@@ -12,7 +12,6 @@ end
 def prompt(key, name='', op='')
   message = messages(key, LANGUAGE)
   puts("=> #{op} #{message} #{name}")
-
 end
 
 def valid_number?(number)
@@ -34,7 +33,7 @@ end
 
 puts "Choose a language. English (en) or Japanese (ja)."
 LANGUAGE = gets.chomp
-MESSAGES = YAML::load_file('calculator.conf')
+MESSAGES = YAML.load_file('calculator.conf')
 
 prompt('welcome_message')
 
@@ -87,7 +86,7 @@ loop do
     end
   end
 
-  prompt('in_progress','', operation_to_message(operator))
+  prompt('in_progress', '', operation_to_message(operator))
   result =  case operator
             when "1"
               number1.to_i + number2.to_i
@@ -99,7 +98,7 @@ loop do
               number1.to_f / number2.to_f
             end
 
-  prompt('result')  
+  prompt('result')
   puts "\t\t" + result.to_s
 
   prompt('another?')
